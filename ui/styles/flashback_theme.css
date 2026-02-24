@@ -1,0 +1,251 @@
+/* ===== FLASHBACK THEME ===== */
+/* Dark purple/pink gradient aesthetic for Streamlit */
+
+:root {
+  --bg-main: #05010d;
+  --bg-gradient: radial-gradient(
+    1200px circle at 20% 10%,
+    rgba(139, 92, 246, 0.18),
+    transparent 40%
+  ),
+  radial-gradient(
+    1000px circle at 80% 30%,
+    rgba(168, 85, 247, 0.12),
+    transparent 45%
+  ),
+  radial-gradient(
+    900px circle at 50% 80%,
+    rgba(236, 72, 153, 0.08),
+    transparent 50%
+  );
+
+  --glass-bg: rgba(24, 15, 45, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --text-main: #f4f4f5;
+  --text-muted: #a1a1aa;
+
+  --purple-main: #a78bfa;
+  --purple-glow: rgba(167, 139, 250, 0.45);
+
+  --pink-main: #ec4899;
+  --blue-main: #38bdf8;
+  --green-main: #22c55e;
+  --yellow-main: #facc15;
+}
+
+/* ===== APP BACKGROUND ===== */
+.stApp {
+  background:
+    var(--bg-gradient),
+    linear-gradient(180deg, #05010d 0%, #020617 100%);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Hide Streamlit UI */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 22px;
+  border: 1px solid var(--glass-border);
+  padding: 1.6rem;
+  margin-bottom: 1.4rem;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.02),
+    0 20px 60px rgba(0,0,0,0.55);
+}
+
+/* ===== HERO TITLE ===== */
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    90deg,
+    #c084fc,
+    #a78bfa,
+    #60a5fa
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== SUBTEXT ===== */
+.hero-sub {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 0.6rem;
+}
+
+/* ===== STATUS STRIPS ===== */
+.status-blue { border-left: 4px solid var(--blue-main); }
+.status-green { border-left: 4px solid var(--green-main); }
+.status-purple { border-left: 4px solid var(--purple-main); }
+.status-yellow { border-left: 4px solid var(--yellow-main); }
+.status-pink { border-left: 4px solid var(--pink-main); }
+
+/* ===== THINKING PULSE ===== */
+.thinking {
+  animation: glowPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0 rgba(167,139,250,0.0); }
+  50% { box-shadow: 0 0 24px rgba(167,139,250,0.35); }
+  100% { box-shadow: 0 0 0 rgba(167,139,250,0.0); }
+}
+
+/* ===== METRIC CARDS ===== */
+.metric {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--purple-main);
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a78bfa, #ec4899);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 30px rgba(167,139,250,0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(167,139,250,0.5);
+}
+
+/* ===== STREAMLIT COMPONENT OVERRIDES ===== */
+stTextInput > div > div > input {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  color: var(--text-main) !important;
+  font-size: 1rem !important;
+}
+
+stTextInput > div > div > input:focus {
+  border-color: var(--purple-main) !important;
+  box-shadow: 0 0 20px var(--purple-glow) !important;
+}
+
+stButton > button {
+  background: linear-gradient(135deg, #a78bfa, #ec4899) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 2rem !important;
+  box-shadow: 0 0 30px rgba(167,139,250,0.35) !important;
+  transition: all 0.3s ease !important;
+}
+
+stButton > button:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 0 40px rgba(167,139,250,0.5) !important;
+}
+
+stToggle > div > div > div {
+  background: var(--purple-main) !important;
+}
+
+stProgress > div > div > div > div {
+  background: linear-gradient(90deg, var(--purple-main), var(--pink-main)) !important;
+  border-radius: 10px !important;
+}
+
+stExpander {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 16px !important;
+}
+
+stSpinner > div {
+  border-color: var(--purple-main) transparent var(--purple-main) transparent !important;
+}
+
+/* ===== TERMINAL LOG ===== */
+.terminal {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: 'Monaco', 'Menlo', monospace;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+}
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  margin: 2rem 0;
+}
+
+/* ===== STICKY RESEARCH HEADER ===== */
+.sticky-research-header {
+  position: sticky;
+  top: 12px;
+  left: 0;
+  z-index: 999;
+
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #a78bfa;
+  opacity: 0.85;
+
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+
+  background: rgba(15, 8, 30, 0.6);
+  backdrop-filter: blur(10px);
+  border-left: 3px solid #a78bfa;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* Optional subtle divider effect */
+.sticky-research-header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.4rem;
+  background: linear-gradient(
+    to right,
+    rgba(167,139,250,0.6),
+    transparent
+  );
+}
+

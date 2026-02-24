@@ -1,0 +1,292 @@
+/* AutoResearch Agent - Modern Streamlit Styling */
+
+/* Global Reset & Base */
+.stApp {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Hide default Streamlit elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Hero Section Styling */
+.hero-container {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #3d7ab5 100%);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(30, 58, 95, 0.3);
+}
+
+.hero-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Card Components */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e3a5f;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Control Panel */
+.control-panel {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e2e8f0;
+}
+
+/* Input Styling */
+stTextInput > div > div > input {
+    border-radius: 12px !important;
+    border: 2px solid #e2e8f0 !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    transition: all 0.2s ease;
+}
+
+stTextInput > div > div > input:focus {
+    border-color: #3d7ab5 !important;
+    box-shadow: 0 0 0 3px rgba(61, 122, 181, 0.1) !important;
+}
+
+/* Button Styling */
+stButton > button {
+    background: linear-gradient(135deg, #3d7ab5 0%, #2d5a87 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(61, 122, 181, 0.3) !important;
+}
+
+stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(61, 122, 181, 0.4) !important;
+}
+
+stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Results Section */
+.result-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid #22c55e;
+    margin-bottom: 1.5rem;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #166534;
+    margin-bottom: 1rem;
+}
+
+.result-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1f2937;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e3a5f;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Progress Bars */
+stProgress > div > div > div > div {
+    background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%) !important;
+    border-radius: 10px !important;
+}
+
+/* Source Credibility */
+.credibility-high {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.credibility-medium {
+    color: #ca8a04;
+    font-weight: 600;
+}
+
+.credibility-low {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* Warning/Contradiction Cards */
+.warning-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 12px;
+    padding: 1rem;
+    border-left: 4px solid #f59e0b;
+    margin-bottom: 0.75rem;
+}
+
+/* Expander Styling */
+stExpander {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+stExpander > div > div > div {
+    background: #f8fafc !important;
+    border-radius: 12px !important;
+}
+
+/* Toggle Styling */
+stToggle > div > div > div {
+    background: #3d7ab5 !important;
+}
+
+/* Spinner */
+stSpinner > div {
+    border-color: #3d7ab5 transparent #3d7ab5 transparent !important;
+}
+
+/* Success/Error Messages */
+.stSuccess {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid #22c55e !important;
+}
+
+.stWarning {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid #f59e0b !important;
+}
+
+.stInfo {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+    border-radius: 12px !important;
+    border-left: 4px solid #3b82f6 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+}
+
+/* Agent Log Entries */
+.log-entry {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.875rem;
+}
+
+.log-entry:last-child {
+    border-bottom: none;
+}
+
+.log-timestamp {
+    color: #6b7280;
+    font-size: 0.75rem;
+}
+
+.log-agent {
+    color: #3d7ab5;
+    font-weight: 600;
+}
+
+/* Sub-question Cards */
+.subq-card {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #3d7ab5;
+}
+
+.subq-number {
+    color: #3d7ab5;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+/* Source Links */
+.source-link {
+    color: #3d7ab5;
+    text-decoration: none;
+    font-size: 0.875rem;
+    word-break: break-all;
+}
+
+.source-link:hover {
+    text-decoration: underline;
+}

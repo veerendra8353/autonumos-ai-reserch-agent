@@ -1,0 +1,253 @@
+/* ================================
+   CUSTOM FONT LOADING
+   ================================ */
+@font-face {
+  font-family: "HelloChristmas";
+  src: url("../assets/fonts/HelloChristmas.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ================================
+   GLOBAL BACKGROUND
+   ================================ */
+.stApp {
+  background: linear-gradient(180deg, #05010d, #020617);
+  font-family: Inter, system-ui;
+  color: #f4f4f5;
+}
+
+/* Hide Streamlit UI */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ================================
+   HERO CARD (NORMAL STATE)
+   ================================ */
+.hero-card {
+  background: rgba(25, 10, 45, 0.75);
+  border-radius: 22px;
+  padding: 2.2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, #c084fc, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  margin-top: 0.6rem;
+  text-align: center;
+  color: #a1a1aa;
+  font-size: 1.1rem;
+}
+
+/* ================================
+   STICKY TOP-LEFT TITLE (TARGET FONT)
+   ================================ */
+.sticky-research-title {
+  position: sticky;
+  top: 14px;
+  left: 0;
+  z-index: 999;
+
+  font-family: "HelloChristmas", serif;   /* 👈 TARGET FONT */
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #a78bfa;
+  opacity: 0.9;
+
+  padding: 0.5rem 0.9rem;
+  margin-bottom: 1rem;
+
+  background: rgba(15, 5, 30, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-left: 4px solid #a78bfa;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+/* ================================
+   INPUT CLEANUP
+   ================================ */
+div[data-testid="stTextInput"] label {
+  display: none;
+}
+
+div[data-testid="stTextInput"] input {
+  background: rgba(20, 10, 40, 0.9);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+div[data-testid="stTextInput"] input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+  outline: none;
+}
+
+/* ================================
+   CTA
+   ================================ */
+.cta-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 95, 109, 0.3);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 95, 109, 0.4);
+}
+
+.cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   CONTENT CARDS
+   ================================ */
+.content-card {
+  background: rgba(20, 10, 40, 0.7);
+  border-radius: 16px;
+  padding: 1.4rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.content-card h3 {
+  color: #a78bfa;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.content-card p {
+  color: #f4f4f5;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================================
+   RESEARCH RESULTS STYLING
+   ================================ */
+.research-synthesis {
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 4px solid #22c55e;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f4f4f5;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.metric-card {
+  background: rgba(167, 139, 250, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  color: #f4f4f5;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ================================
+   BUTTON OVERRIDES
+   ================================ */
+stButton > button {
+  background: linear-gradient(135deg, #a78bfa, #ec4899) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.8rem 2rem !important;
+  transition: all 0.3s ease !important;
+}
+
+stButton > button:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.5) !important;
+}
+
+/* ================================
+   EXPANDER STYLING
+   ================================ */
+stExpander {
+  background: rgba(20, 10, 40, 0.7) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  border-radius: 16px !important;
+}
+
+/* ================================
+   PROGRESS BAR
+   ================================ */
+stProgress > div > div > div > div {
+  background: linear-gradient(90deg, #a78bfa, #ec4899) !important;
+  border-radius: 10px !important;
+}
+
+/* ================================
+   SPINNER
+   ================================ */
+stSpinner > div {
+  border-color: #a78bfa transparent #a78bfa transparent !important;
+}
+
+/* ================================
+   SUCCESS MESSAGE
+   ================================ */
+stSuccess {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  border-radius: 12px !important;
+  color: #22c55e !important;
+}
